@@ -10,7 +10,7 @@ You can install _Hop_ by executing the following code snippet in your
 terminal. If you don't have _cURL_ installed, then you must figure out 
 on your own how to install it :P.
 
-    $ TARGET=/usr/bin/hop sh -c 'curl -s https://raw.github.com/nu7hatch/hop/master/bin/hop | sudo tee $TARGET > /dev/null && sudo chmod +x $TARGET'
+    $ curl -sL https://raw.github.com/nu7hatch/hop/master/install | TARGET=/usr/bin/hop bash
 
 You may want to change the target path to get _Hop_ installed somewhere
 else.

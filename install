@@ -1,0 +1,5 @@
+#!/bin/bash
+
+curl -sL https://raw.github.com/nu7hatch/hop/master/bin/hop \
+    | sudo tee $TARGET > /dev/null \
+    && sudo chmod +x $TARGET
