@@ -1,16 +1,23 @@
 # Hop in the project!
 
-Hop is a simple _bash_ script which quickly bootstraps project's 
-dependencies described in the `.hop` file. Hop uses `make`, and
+_Hop_ is a simple _bash_ script which quickly bootstraps project's 
+dependencies described in the `.hop` file. _Hop_ uses `make`, and
 _makefile_ formatted files.
 
 ## Installation
 
-TODO
+You can install _Hop_ by executing the following code snippet in your
+terminal. If you don't have _cURL_ installed, then you must figure out 
+on your own how to install it :P.
+
+    $ TARGET=/usr/bin/hop sh -c 'curl -s https://raw.github.com/nu7hatch/hop/master/bin/hop | sudo tee $TARGET > /dev/null && sudo chmod +x $TARGET'
+
+You may want to change the target path to get _Hop_ installed somewhere
+else.
 
 ## Usage
 
-To use Hop you need to describe all the dependencies to be bootstrapped 
+To use _Hop_ you need to describe all the dependencies to be bootstrapped 
 in the `.hop` file, in root directory of your project. The `.hop` files
 use _makefile_ syntax to describe dependencies. Here's an example:
 
@@ -34,7 +41,7 @@ project directory:
     
     -----> Fuck yeah!
 
-Hop will run everything you need to start working with the project at once.
+_Hop_ will run everything you need to start working with the project at once.
 
 ## Copyright
 
