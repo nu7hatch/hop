@@ -5,6 +5,13 @@ set -o pipefail
 
 hopfile=""
 
+if [ "$1" == "-h" ] || [ "$1" == "--help" ] || [ "$1" == "-help" ]; then
+    echo -e "Usage: $0 [hopfile]\n"
+    echo "Hop bootstraps project dependiecies described in local hop-file\n"
+    echo "or uses a common one specified by the user."
+    exit 1
+fi
+
 if [ "$1" == "" ]; then
     hopfile="$(pwd)/.hop"
 else
