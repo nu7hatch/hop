@@ -1,15 +1,21 @@
 #!/bin/bash
 
-hopfile="$(pwd)/.hop"
-
 set -e
 set -o pipefail
+
+hopfile=""
+
+if [ "$1" == "" ]; then
+    hopfile="$(pwd)/.hop"
+else
+    hopfile="$HOME/.hop/$1"
+fi
 
 if [ -f "$hopfile" ]; then
 	echo -e "-----> Hopping in..."
 	make -f $hopfile 2>&1 | sed 's/^/       /' && echo -e "\n-----> Fuck yeah!" && exit 0
 else
-    echo -e "Can't hop in, no '.hop' file found!"
+    echo -e "Can't hop in, '$hopfile' not found!"
     exit 1
 fi
 
