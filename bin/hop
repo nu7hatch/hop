@@ -12,8 +12,8 @@ else
 fi
 
 if [ -f "$hopfile" ]; then
-	echo -e "-----> Hopping in..."
-	make -f $hopfile 2>&1 | sed 's/^/       /' && echo -e "\n-----> Fuck yeah!" && exit 0
+    echo -e "-----> Hopping in..."
+    make -f $hopfile 2>&1 | sed 's/^/       /' && echo -e "\n-----> Fuck yeah!" && exit 0
 else
     echo -e "Can't hop in, '$hopfile' not found!"
     exit 1
