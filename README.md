@@ -43,6 +43,16 @@ project directory:
 
 _Hop_ will run everything you need to start working with the project at once.
 
+## Common Hop-files
+
+Your _Hop_ configuration doesn't necessary need to be in the project directory.
+You can use common hop-files placed in `~/.hop/` directory. To use common
+hop-file you must specify its name hen calling `hop` command:
+
+    $ hop common_setup
+
+This will hop in using the `~/.hop/common_setup` configuration file.
+
 ## Copyright
 
 Copyright 2012 (C) by Chris Kowalik (aka. nu7hatch)
